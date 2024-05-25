@@ -1,1 +1,9 @@
+num_records = int(input())
+max_values = []
+for _ in range(num_records):
+    line = input()
+    values = list(map(int, line.split()))
+    max_values.append(max(values))
+max_values.sort(reverse=True)
+print(';'.join(map(str, max_values)))
 
