@@ -1,0 +1,10 @@
+def process_string(s):
+  s = s.upper() if s.startswith("!") else s.lower()
+  for char in "!@#%":
+    s = s.replace(char, "")
+  return s
+while True:
+  try:
+    print(process_string(input()))
+  except EOFError:
+    break
