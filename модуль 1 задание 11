@@ -1,0 +1,25 @@
+def has4Uniq(w):
+    word = set()
+    for l in w:
+        word.add(l)
+
+    if len(word) > 3:
+        return True
+    else: return False
+words = input()
+words2 = ''
+for l in words:
+    if l not in '!,.?;:#$%^&*(),':
+        words2 += l
+words3 = words2.lower().split() #
+words4 = []
+for w in words3:
+    if len(w) > 4 and has4Uniq(w):
+        words4.append(w)
+final_set = set()
+for w in words4:
+    if words4.count(w) > 2:
+        final_set.add(w)
+final_list = sorted(list(final_set))
+for i in final_list:
+    print(i)
