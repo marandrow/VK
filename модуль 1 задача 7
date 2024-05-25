@@ -1,3 +1,0 @@
-text = input()
-avg_len = round(sum(len(word) for word in text.split()) / len(text.split()), 2)
-print(avg_len)
