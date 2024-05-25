@@ -1,0 +1,9 @@
+def avg(line):
+    numbers = list(map(int, line.split()))
+    return sum(numbers) / len(numbers)
+
+while True:
+    line = input()
+    if not line:
+        break
+    print(avg(line))
