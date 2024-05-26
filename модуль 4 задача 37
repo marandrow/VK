@@ -1,0 +1,10 @@
+import datetime
+days, seconds = int(input()), int(input())
+def shift_time(days: int, seconds: int):
+    datetime_object = datetime.datetime(2023, 1, 1, 12, 30, 00)
+    total_seconds = ((days * 24 * 60 * 60) + seconds)
+    datetime_object = datetime_object + datetime.timedelta(seconds=total_seconds)
+    day = datetime_object.day
+    second = datetime_object.second
+    return day, second
+print(shift_time(days, seconds))
