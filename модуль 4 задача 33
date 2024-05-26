@@ -1,0 +1,9 @@
+import os
+text = input()
+def write_and_read(text):
+    file_path = os.path.join('/tmp', 'text_file.txt')
+    with open(file_path, 'w') as file:
+        file.write(text)
+    with open(file_path, 'r') as file:
+        return file.read()
+print(write_and_read(text))
