@@ -1,0 +1,8 @@
+import datetime
+def parse_time(s):
+    datetime_format = "%Y %m %d %H %M %S"
+    dt = datetime.datetime.strptime(s, datetime_format)
+    dt += datetime.timedelta(days=1)
+    return dt.day
+string_datetime = input()
+print(parse_time(string_datetime))
