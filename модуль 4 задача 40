@@ -1,0 +1,11 @@
+from collections import deque
+from typing import List
+def rotate_list(nums: List[int], n: int):
+    deque_nums = deque(nums)
+    deque_nums.rotate(n)
+    return list(deque_nums)
+code = []
+while data := input():
+    code.append(data)
+code = "n".join(code)
+exec(code)
