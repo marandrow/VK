@@ -1,0 +1,2 @@
+start, end, step = map(int, input().split())
+print(*map(lambda x: x * x if x % 2 else -x, range(start, end, step)), sep='\n')
